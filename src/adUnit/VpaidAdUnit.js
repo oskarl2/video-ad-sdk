@@ -509,6 +509,7 @@ class VpaidAdUnit extends VideoAdUnit {
    * @returns {Promise} - that resolves once the unit was resized
    */
   async resize (width, height, viewmode) {
+    console.trace()
     await super.resize(width, height, viewmode);
 
     return callAndWait(this.creativeAd, resizeAd, adSizeChange, width, height, viewmode);
